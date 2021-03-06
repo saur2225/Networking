@@ -310,13 +310,15 @@
                     <p class="text-right small">©2016-2018 Company</p>
                 </footer> -->
 
-
+                <div class="link" style="text-align: center;">
+                    <input type="text" value="Redeem Link" id="myInput">
+                    <button onclick="myFunction()" style="background-color: #2ECA8B; border:none; color:white; padding:3px 10px;">Copy text</button>
+                </div><br>
                 <!-- Modal -->
                 <!-- Button trigger modal -->
                 <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" style="display:block; margin-left:auto; margin-right:auto">
                     Redeem
                 </button>
-
                 <!-- Modal -->
                 <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                     <div class="modal-dialog" role="document">
@@ -496,6 +498,15 @@
         ai.src = v.location.protocol + o;
         d.head.appendChild(ai);
     })(window, document, '../../../../../../../a.vdo.ai/core/v-w3layouts/vdo.ai.js');
+</script>
+<script>
+    function myFunction() {
+        var copyText = document.getElementById("myInput");
+        copyText.select();
+        copyText.setSelectionRange(0, 99999)
+        document.execCommand("copy");
+        alert("Copied the text: " + copyText.value);
+    }
 </script>
 </body>
 
